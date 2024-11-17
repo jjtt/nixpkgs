@@ -1,0 +1,24 @@
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+}:
+
+buildPythonPackage rec {
+  pname = "cfv";
+  version = "3.1.0";
+
+  src = fetchFromGitHub {
+    owner = "cfv-project";
+    repo = "cfv";
+    rev = "v${version}";
+    sha256 = "1wxf30gsijsdvhv5scgkq0bqi8qi4dgs9dwppdrca5wxgy7a8sn5";
+  };
+
+  meta = with lib; {
+    description = "cfv is a utility to test and create a wide range of checksum verification files";
+    homepage = "https://github.com/cfv-project/cfv";
+    license = licenses.gpl2Plus;
+    maintainers = with maintainers; [ jjtt ];
+  };
+}
