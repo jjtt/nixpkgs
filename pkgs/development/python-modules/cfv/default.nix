@@ -11,7 +11,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "cfv-project";
     repo = "cfv";
-    rev = "v${version}";
+    rev = "refs/tags/v${version}";
     sha256 = "1wxf30gsijsdvhv5scgkq0bqi8qi4dgs9dwppdrca5wxgy7a8sn5";
   };
 
