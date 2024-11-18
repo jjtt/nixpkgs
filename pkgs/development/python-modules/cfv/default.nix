@@ -15,10 +15,10 @@ buildPythonPackage rec {
     sha256 = "1wxf30gsijsdvhv5scgkq0bqi8qi4dgs9dwppdrca5wxgy7a8sn5";
   };
 
-  meta = with lib; {
+  meta = {
     description = "cfv is a utility to test and create a wide range of checksum verification files";
     homepage = "https://github.com/cfv-project/cfv";
-    license = licenses.gpl2Plus;
-    maintainers = with maintainers; [ jjtt ];
+    license = lib.licenses.gpl2Plus;
+    maintainers = with lib.maintainers; [ jjtt ];
   };
 }
